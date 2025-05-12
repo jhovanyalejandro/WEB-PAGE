@@ -33,12 +33,29 @@
             font-size: 1.5rem;
             margin: 10px 0;
         }
+
+        .redirect-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .redirect-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¡Bienvenido a nuestra página web!</h1>
         <p>Visitas: <span id="visit-counter">0</span></p>
+        <a href="https://example.com" class="redirect-button">Ir a otro sitio</a> <!-- Cambia el enlace a tu URL deseada -->
     </div>
 
     <script>
