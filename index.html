@@ -1,4 +1,78 @@
- <p id="contador-visitas"></p> <!-- Aquí se mostrará el contador de visitas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Fondo de color */
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #contador-visitas {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido/a</h1>
+        <p>Gracias por visitar nuestra página. Por favor, completa el siguiente formulario para contactarnos:</p>
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="contador-visitas"></p> <!-- Aquí se mostrará el contador de visitas -->
+    </div>
 
     <script>
         // Obtener el contador de visitas desde localStorage
