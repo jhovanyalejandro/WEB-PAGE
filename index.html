@@ -11,14 +11,14 @@
             font-family: Arial, sans-serif;
             text-align: center;
             color: white;
-            background-image: url('https://your-image-url.com/background.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-image: url('https://your-image-url.com/background.jpg'); /* Cambia esto con la URL de tu imagen */
             background-size: cover;
             background-position: center;
         }
 
         .container {
-            margin-top: 20%;
-            background: rgba(0, 0, 0, 0.5);
+            margin-top: 10%;
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
@@ -55,6 +55,7 @@
     <div class="container">
         <h1>¡Bienvenido a nuestra página web!</h1>
         <p>Visitas: <span id="visit-counter">0</span></p>
+        <p>Fecha y Hora: <span id="date-time"></span></p>
         <a href="https://example.com" class="redirect-button">Ir a otro sitio</a> <!-- Cambia el enlace a tu URL deseada -->
     </div>
 
@@ -73,8 +74,20 @@
             visitCounter.textContent = visits; // Mostrar en la página
         }
 
-        // Llamar a la función al cargar la página
+        // Función para actualizar la fecha y la hora
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById('date-time');
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString(); // Formato de fecha y hora local
+            dateTimeElement.textContent = formattedDateTime;
+        }
+
+        // Llamar a las funciones al cargar la página
         updateVisitCounter();
+        updateDateTime();
+
+        // Actualizar la fecha y hora cada segundo
+        setInterval(updateDateTime, 1000);
     </script>
 </body>
 </html>
